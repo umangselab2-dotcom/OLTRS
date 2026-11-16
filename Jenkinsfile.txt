@@ -13,7 +13,7 @@ node {
     }
 
     stage('Docker Build') {
-        sh 'docker build -t umangselab/oltrs:latest .'
+        sh 'docker build -t umangselab2/oltrs:latest .'
     }
 
     stage('Docker Push') {
@@ -24,7 +24,7 @@ node {
         )]) {
             sh '''
                 echo "$PASS" | docker login -u "$USER" --password-stdin
-                docker push YOUR_USERNAME/oltrs:latest
+                docker push umangselab2/oltrs:latest
             '''
         }
     }
