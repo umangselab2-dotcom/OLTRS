@@ -1,7 +1,7 @@
 node {
     stage('Git Checkout') {
         git branch: 'master',
-        url: 'https://github.com/archanareddyse/OLTRS.git'
+        url: 'https://github.com/umangselab2-dotcom/OLTRS.git'
     }
 
     stage('Build') {
@@ -13,7 +13,7 @@ node {
     }
 
     stage('Docker Build') {
-        sh 'docker build -t YOUR_USERNAME/oltrs:latest .'
+        sh 'docker build -t umangselab/oltrs:latest .'
     }
 
     stage('Docker Push') {
